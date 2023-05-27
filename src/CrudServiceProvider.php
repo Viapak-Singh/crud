@@ -26,7 +26,7 @@ class CrudServiceProvider extends ServiceProvider
             __DIR__.'/Http/Controllers/CrudController.php' => app_path('Http/Controllers/CrudController.php'),
         ]);
         $this->publishes([
-            __DIR__.'/routes/web.php' => app_path('routes/web.php'),
+            __DIR__.'/routes/web.php' => public_path('routes/web.php'),
         ]);
     }
 
