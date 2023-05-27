@@ -20,7 +20,7 @@ class CrudServiceProvider extends ServiceProvider
             __DIR__.'/config/crud.php' => config_path('crud.php'),
         ]);
         $this->publishes([
-            __DIR__.'/views' => resource_path('views/vendor/crud'),
+            __DIR__.'/views' => resource_path('views/vip/crud'),
         ]);
     }
 
