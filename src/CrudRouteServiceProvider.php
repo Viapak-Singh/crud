@@ -57,6 +57,6 @@ class CrudRouteServiceProvider extends RouteServiceProvider
      */
     private function getRoutesFile()
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . 'routes.php';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'routes/web.php';
     }
 }
