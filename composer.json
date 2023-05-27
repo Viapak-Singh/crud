@@ -1,0 +1,26 @@
+{
+    "name": "vip/crud",
+    "description": "This is a simple crud operation in laravel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vip\\Crud\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Viapak-Singh",
+            "email": "vip8work@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vip\\Crud\\CrudServiceProvider"
+            ]
+        }
+    }
+}
