@@ -11,7 +11,7 @@ class CrudServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/routes/web.php');
+        // $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         $this->loadViewsFrom(__DIR__.'/views', 'crud');
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
         $this->mergeConfigFrom(
@@ -33,9 +33,12 @@ class CrudServiceProvider extends ServiceProvider
 
     private function loadRoutes()
     {
-        Route::macro('Vip\Crud', function () {
-            $this->group(['namespace' => 'Vip\Crud\Controllers', 'middleware' => 'web'], function () {
-                require __DIR__.'/routes/web.php';
+        Route::macro('vipCrud', function () {
+            $this->group([
+                'namespace' => 'Vip\Crud\Controllers',
+                'middleware' => 'web',
+            ], function () {
+                $this->loadRoutesFrom(__DIR__.'/routes/web.php');
             });
         });
     }
