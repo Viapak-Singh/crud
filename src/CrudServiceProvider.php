@@ -3,6 +3,7 @@
 namespace Vip\Crud;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
 
 class CrudServiceProvider extends ServiceProvider 
