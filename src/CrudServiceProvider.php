@@ -22,11 +22,21 @@ class CrudServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/views' => resource_path('views/vendor/crud'),
         ]);
+        $this->loadRoutes();
     }
 
     public function register() 
     {
-        $this->app->register(CrudRouteServiceProvider::class);
+        //
+    }
+
+    private function loadRoutes()
+    {
+        Route::macro('Vip\Crud', function () {
+            $this->group(['namespace' => 'Vip\Crud\Controllers', 'middleware' => 'web'], function () {
+                require __DIR__.'/routes/web.php';
+            });
+        });
     }
 
 }
