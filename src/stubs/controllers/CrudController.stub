@@ -1,11 +1,11 @@
 <?php
 
-namespace Vip\Crud\Http\Controllers;
+namespace {{namespace}}Http\Controllers;
 
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Vip\Crud\Models\Record;
+use {{namespace}}Models\Record;
 use Yajra\DataTables\Facades\DataTables;
 
 class CrudController extends Controller

@@ -1,0 +1,10 @@
+
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('records/index', [App\Http\Controllers\CrudController::class, 'index'])->name('index');
+    Route::get('record/create', [App\Http\Controllers\CrudController::class, 'create'])->name('create');
+    Route::post('record/create', [App\Http\Controllers\CrudController::class, 'store'])->name('store');
+    Route::get('record/edit/{id}', [App\Http\Controllers\CrudController::class, 'edit'])->name('record.edit');
+    Route::put('record/update/{id}', [App\Http\Controllers\CrudController::class, 'update'])->name('record.update');
+    Route::delete('record/delete/{id}', [App\Http\Controllers\CrudController::class, 'destroy'])->name('record.destroy');
+});
