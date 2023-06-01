@@ -36,6 +36,7 @@ class VipCommand extends Command
     public function handle()
     {
         $this->exportBackend();
+        $this->exportViews();
 
         $this->components->info('Laravel crud generated successfully.');
     }
@@ -50,7 +51,6 @@ class VipCommand extends Command
 
         $controller = app_path('Http/Controllers/CrudController.php');
 
-        $model = app_path('Models/Record.php');
 
         if (file_exists($controller) && ! $this->option('force')) {
             if ($this->components->confirm("The [CrudController.php] file already exists. Do you want to replace it?")) {
@@ -60,12 +60,14 @@ class VipCommand extends Command
             file_put_contents($controller, $this->compileControllerStub());
         }
 
+        $model = app_path('Models/Record.php');
+
         if (file_exists($model) && ! $this->option('force')) {
             if ($this->components->confirm("The [Record.php] file already exists. Do you want to replace it?")) {
                 file_put_contents($model, $this->compileModelStub());
             }
         } else {
-            file_put_contents($controller, $this->compileModelStub());
+            file_put_contents($model, $this->compileModelStub());
         }
 
         file_put_contents(
