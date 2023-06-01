@@ -26,7 +26,7 @@ class CrudServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                VipCommand::class
+                Commands\VipCommand::class
             ]);
         }
     }
