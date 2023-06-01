@@ -22,7 +22,7 @@ class CrudServiceProvider extends ServiceProvider
         // $this->loadControllers();
         // $this->loadRoutes();
 
-        AboutCommand::add('Run php artisan vendor:publish --provider=Vip\Crud\CrudServiceProvider and php artisan crud:generate');
+        AboutCommand::add('Run',fn() => ['php artisan vendor:publish --provider=Vip\Crud\CrudServiceProvider', 'php artisan crud:generate']);
     }
 
     public function register() 
