@@ -3,7 +3,7 @@
 namespace Vip\Crud;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Foundation\Console\AboutCommand;
 
 
 class CrudServiceProvider extends ServiceProvider 
@@ -21,6 +21,8 @@ class CrudServiceProvider extends ServiceProvider
         // $this->loadViews();
         // $this->loadControllers();
         // $this->loadRoutes();
+
+        AboutCommand::add('Run php artisan vendor:publish --provider=Vip\Crud\CrudServiceProvider and php artisan crud:generate');
     }
 
     public function register() 
