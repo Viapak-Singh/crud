@@ -19,7 +19,7 @@ class CrudController extends Controller
             ->addColumn(
                 'action',
                 function ($row) {
-                    return view('crud.components.action_buttons', [
+                    return view('components.action_buttons', [
                         'can_update' => true,
                         'editBtnClass' => 'edit_record btn-edit',
                         'data_id' => $row->id,

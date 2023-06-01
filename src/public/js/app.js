@@ -2,7 +2,7 @@ $(function() {
     var records_table = $('#records_table').DataTable({
         processing: true,
         serverSide: true,
-        ajax: '/vip/index',
+        ajax: '/records/index',
         "columns": [
             {"data": "id"},
             {"data": "name"},
