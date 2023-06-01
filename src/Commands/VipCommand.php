@@ -139,6 +139,9 @@ class VipCommand extends Command
      */
     protected function getViewPath($path)
     {
+        if (! is_dir($directory = app_path('views/crud'))) {
+            mkdir($directory, 0755, true);
+        }
         return implode(DIRECTORY_SEPARATOR, [
             config('view.paths')[0] ?? resource_path('views'), $path,
         ]);
