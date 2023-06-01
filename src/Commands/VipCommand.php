@@ -23,7 +23,7 @@ class VipCommand extends Command
         'create.stub' => 'crud/create.blade.php',
         'edit.stub' => 'crud/edit.blade.php',
         'index.stub' => 'crud/index.blade.php',
-        'layouts/app.stub' => 'layouts/app.blade.php',
+        'layouts/crud.stub' => 'layouts/crud.blade.php',
         'components/action_buttons.stub' => 'components/action_buttons.blade.php'
     ];
 
