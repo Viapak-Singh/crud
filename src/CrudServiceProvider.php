@@ -17,9 +17,9 @@ class CrudServiceProvider extends ServiceProvider
         // Custom Methods
         $this->loadAssets();
         $this->loadConfiguration();
-        $this->loadViews();
-        $this->loadControllers();
-        $this->loadRoutes();
+        // $this->loadViews();
+        // $this->loadControllers();
+        // $this->loadRoutes();
     }
 
     public function register() 
