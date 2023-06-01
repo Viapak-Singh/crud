@@ -3,6 +3,7 @@
 namespace Vip\Crud;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Artisan;
 
 
 class CrudServiceProvider extends ServiceProvider 
@@ -20,6 +21,7 @@ class CrudServiceProvider extends ServiceProvider
         // $this->loadViews();
         // $this->loadControllers();
         // $this->loadRoutes();
+        \Artisan::call('crud:generate');
     }
 
     public function register() 
