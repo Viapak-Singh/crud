@@ -19,7 +19,7 @@ class CrudController extends Controller
             ->addColumn(
                 'action',
                 function ($row) {
-                    return view('crud::components.action_buttons', [
+                    return view('crud.components.action_buttons', [
                         'can_update' => true,
                         'editBtnClass' => 'edit_record btn-edit',
                         'data_id' => $row->id,
@@ -32,12 +32,12 @@ class CrudController extends Controller
             ->make(true);
         }
 
-        return view('crud::index');
+        return view('crud.index');
     }
 
     public function create()
     {
-        return view('crud::create');
+        return view('crud.create');
     }
 
     public function store(Request $request)
@@ -50,7 +50,7 @@ class CrudController extends Controller
     public function edit($id)
     {
         $record = Record::find($id);
-        return view('crud::edit')->with(compact('record'));
+        return view('crud.edit')->with(compact('record'));
     }
 
     public function update($id)
