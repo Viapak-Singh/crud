@@ -3,12 +3,12 @@
 namespace Vip\Crud;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Console\Command;
+
 
 class CrudServiceProvider extends ServiceProvider 
 {
 
-    public function boot(Command $command)
+    public function boot()
     {
         // $this->loadRoutesFrom(__DIR__.'/routes/web.php');
         // $this->loadViewsFrom(__DIR__.'/views', 'crud');
@@ -17,7 +17,6 @@ class CrudServiceProvider extends ServiceProvider
         // Custom Methods
         $this->loadAssets();
         $this->loadConfiguration();
-        $command->callSilently('crud:generate');
         // $this->loadViews();
         // $this->loadControllers();
         // $this->loadRoutes();
